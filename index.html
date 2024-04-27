@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log("Hello world!");
+        let hs=0;
+        let cs=0;
+        function GetComputerChoice()
+        {
+            let x = Math.random()*100;
+            if(x<=35)
+            return "rock";
+        else if(x<=65)
+        return "paper";
+    else
+    return "scissors";
+        }
+        function getHumanChoice()
+        {
+           
+            let hc = prompt("enter your choice:");
+            return hc;
+            
+        }
+       
+        function playround(human,computer)
+        {   let n=1;
+            let h= human.toUpperCase();
+            let c= computer.toUpperCase();
+            if(h==="ROCK")
+            {
+                if(c==="PAPER")
+                {
+                    console.log("you lose");
+                    cs++;
+                }
+                else if(c==="SCISSORS")
+                {
+                    console.log("you win");
+                    hs++;
+                }
+                else{
+                    console.log("it's a tie");
+                }
+            }
+            if(h==="PAPER")
+            {
+                if(c==="SCISSORS")
+                {
+                    console.log("you lose");
+                    cs++;
+                }
+                else if(c==="ROCK")
+                {
+                    console.log("you win");
+                    hs++;
+                }
+                else{
+                    console.log("it's a tie");
+                }
+            }
+            if(h==="SCISSORS")
+            {
+                if(c==="ROCK")
+                {
+                    console.log("you lose");
+                    cs++;
+                }
+                else if(c==="PAPER")
+                {
+                    console.log("you win");
+                    hs++;
+                }
+                else{
+                    console.log("it's a tie");
+                }
+            } console.log(`scores after round ${n} : ` );
+             console.log(`you: ${hs}`);
+             console.log(`computer: ${cs}`);
+             n++;
+          
+
+
+        }
+        for(let i=1;i<=5;i++)
+        {
+        let human=getHumanChoice();
+        let computer=GetComputerChoice();
+        
+        playround(human,computer);
+        }
+
+    </script>
+</body>
+</html>
