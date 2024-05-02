@@ -1,0 +1,16 @@
+.rock{
+    background-color: brown;
+
+}
+.paper{
+    background-color: aliceblue;
+}
+.scissors{
+    background-color: #0000ff;
+}
+.player-won{
+  color: chartreuse;
+}
+.computer-won{
+    color: #ff0000;
+}
